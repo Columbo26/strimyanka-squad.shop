@@ -1,4 +1,3 @@
 # strimyanka-squad.shop
 
 
-### sdasdasdas
