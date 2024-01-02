@@ -11,7 +11,7 @@ body {
 /* Стили для шапки */
 header {
     position: relative;
-    background-color: #1a237e; /* Темно-синий фон шапки */
+    background-color: #6D6D6D; /* Темно-синий фон шапки */
     color: #ffffff; /* Белый текст в шапке */
     padding: 10px;
     text-align: center;
@@ -44,7 +44,7 @@ header::before {
 
 
 nav {
-    background-color: #3f51b5; /* Средне-синий фон навигационного меню */
+    background-color: #BBBBBB; /* Средне-синий фон навигационного меню */
     color: #ffffff; /* Белый текст в навигационном меню */
     padding: 10px;
     display: flex; /* Распределение вкладок в строку */
