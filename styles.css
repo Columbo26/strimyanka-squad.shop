@@ -1,0 +1,118 @@
+/* Обнуление отступов и полей для устранения стандартных браузерных стилей */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Стили для шапки */
+header {
+    position: relative;
+    background-color: #1a237e; /* Темно-синий фон шапки */
+    color: #ffffff; /* Белый текст в шапке */
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, #1a237e 0%, #1a237e 50%, #283593 100%); /* Градиент для волны */
+    background-size: 200% auto; /* Размер градиента больше, чем контейнер, чтобы создать эффект движения */
+    animation: wave 4s linear infinite; /* Анимация волны */
+    z-index: -1; /* Задаем z-index, чтобы фон был под текстом */
+}
+
+@keyframes wave {
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+
+
+nav {
+    background-color: #3f51b5; /* Средне-синий фон навигационного меню */
+    color: #ffffff; /* Белый текст в навигационном меню */
+    padding: 10px;
+    display: flex; /* Распределение вкладок в строку */
+    justify-content: space-around; /* Равномерное распределение по ширине */
+}
+
+nav a {
+    color: #ffffff; /* Белый текст для ссылок в навигационном меню */
+    text-decoration: none;
+    padding: 10px; /* Отступ внутри вкладок */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+nav a:hover {
+    background-color: #283593; /* Цвет при наведении */
+}
+
+/* Дополнительные стили для адаптивности */
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Вертикальное распределение вкладок при узком экране */
+    }
+
+    nav a {
+        margin-bottom: 5px; /* Отступ между вкладками */
+    }
+}
+
+/* ... (ваш предыдущий CSS-код) */
+
+
+
+
+/* Стили для блока услуг */
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.services div {
+    width: calc(33.33% - 20px); /* 33.33% ширины с отступами между блоками */
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Эффект глассморфизма */
+    border: 2px solid #1a237e; /* Рамка в стиле сайта */
+    text-align: center;
+    box-sizing: border-box; /* Учет внутренних отступов и границ в ширине блока */
+}
+
+.services img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Закругленные углы для изображений */
+}
+
+/* Дополнительные стили для адаптивности */
+@media screen and (max-width: 900px) {
+    .services div {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .services div {
+        width: calc(100% - 20px);
+    }
+}
